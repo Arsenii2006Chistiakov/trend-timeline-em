@@ -45,10 +45,7 @@ This formulation of $Z$ is not canonical. I use it because this is my project an
 Define the joint probability:
 
 $$
-P(X_i, Z_i \mid \theta)
-=
-\bigl(N_{\mathrm{cdf}}(t_i; \theta)\bigr)^{x_i}
-\bigl(1 - N_{\mathrm{cdf}}(t_i; \theta)\bigr)^{z_i - x_i}
+P(X_i, Z_i \mid \theta) = \bigl(N_{\mathrm{cdf}}(t_i; \theta)\bigr)^{x_i}\bigl(1 - N_{\mathrm{cdf}}(t_i; \theta)\bigr)^{z_i - x_i}
 $$
 
 where `N_cdf` is the CDF of the chosen normal-family model.
@@ -56,13 +53,7 @@ where `N_cdf` is the CDF of the chosen normal-family model.
 Define the EM objective:
 
 $$
-Q(\theta)
-=
-\mathbb{E}_{Z \mid X, \theta^{(old)}}
-\left[
-\sum_{i=1}^{N}
-\log P(X_i, Z_i \mid \theta)
-\right]
+Q(\theta) = \mathbb{E}_{Z \mid X, \theta^{(old)}} \left[ \sum_{i=1}^{N} \log P(X_i, Z_i \mid \theta) \right]
 $$
 
 Informally: take the expectation over the latent $Z$, then maximize with respect to the parameters.
