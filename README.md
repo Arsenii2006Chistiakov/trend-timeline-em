@@ -22,6 +22,8 @@ The problem is that you only observe the data **up to today**. You do **not** ob
 
 So instead, EM should be used. I decided to make this mini project public, because I was really proud to find the the application for the algorithm I learned before. I faced the challenge in relation to my main project Hugo, and got and intution that EM should be used. 
 
+![MLE vs EM comparison](./MLE-vs-EM.png)
+
 ## Setup
 
 The setup is simple.
