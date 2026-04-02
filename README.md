@@ -40,7 +40,7 @@ $$
 Z_i = \text{the unseen total volume of the whole sample as } t \to \infty
 $$
 
-This formulation of $Z$ is not canonical. I use it because this is my project and this is the solution which I derived myself.
+The idea behind the Latent variable can put as follows: we have seen some part of the sample. Now we don't know how large the sample we are looking actually is. We know it's normally distrbuted. So let's create a latent variable to be the total volume of the set. For one familiar with EM it should be a sufficient intuition. This formulation of $Z$ is not canonical. I use it because this is my project and this is the solution which I derived myself.
 
 Define the joint probability:
 
@@ -53,7 +53,7 @@ where `N_cdf` is the CDF of the chosen normal-family model.
 Define the EM objective:
 
 $$
-Q(\theta) = \mathbb{E}_{Z \mid X, \theta^{(old)}} \left[ \sum_{i=1}^{N} \log P(X_i, Z_i \mid \theta) \right]
+Q(\theta) = \mathbb{E}*{Z \mid X, \theta^{(old)}} \left[ \sum*{i=1}^{N} \log P(X_i, Z_i \mid \theta) \right]
 $$
 
 Informally: take the expectation over the latent $Z$, then maximize with respect to the parameters.
